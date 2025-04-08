@@ -62,8 +62,8 @@ const TETROMINOES = {
 };
 
 // Constants for the game
-const BOARD_WIDTH = 10;
-const BOARD_HEIGHT = 20;
+const BOARD_WIDTH = 15;
+const BOARD_HEIGHT = 25;
 const POINTS_PER_LINE = 100;
 // Changed from LEVEL_UP_LINES to POINTS_PER_LEVEL
 const POINTS_PER_LEVEL = 500;

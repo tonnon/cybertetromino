@@ -51,7 +51,7 @@ const TetrisGame: React.FC = () => {
   };
 
   return (
-    <div className="w-full min-h-screen py-8 px-4 flex flex-col items-center justify-center relative overflow-hidden">
+    <div className="w-full min-h-screen py-8 px-4 flex flex-col items-center justify-center relative">
       {/* Game container */}
       <motion.div
         className="relative flex flex-col md:flex-row items-center justify-center gap-8 z-10"
@@ -133,7 +133,7 @@ const TetrisGame: React.FC = () => {
         
         {/* Game info sidebar */}
         <motion.div 
-          className="flex flex-col gap-6 max-w-[300px] w-full"
+          className="flex flex-col gap-[55px] max-w-[300px] w-full"
           variants={gameInfoVariants}
         >
           {/* Next tetromino */}
@@ -159,6 +159,24 @@ const TetrisGame: React.FC = () => {
               <p className="text-xl font-cyber text-foreground">{lines}</p>
             </div>
           </div>
+
+          {/* Controls (desktop) - shown below game on larger screens */}
+          <motion.div 
+            className="hidden md:block"
+            variants={controlsVariants}
+            initial="initial"
+            animate="animate"
+          >
+            <Controls
+              onMove={moveTetromino}
+              onDrop={dropTetromino}
+              onRotate={rotateTetromino}
+              onHardDrop={hardDropTetromino}
+              onTogglePause={togglePause}
+              isPaused={isPaused}
+              gameActive={gameActive}
+            />
+          </motion.div>
           
           {/* Controls (mobile-friendly) */}
           <motion.div 
@@ -176,24 +194,6 @@ const TetrisGame: React.FC = () => {
             />
           </motion.div>
         </motion.div>
-      </motion.div>
-      
-      {/* Controls (desktop) - shown below game on larger screens */}
-      <motion.div 
-        className="hidden md:block mt-8"
-        variants={controlsVariants}
-        initial="initial"
-        animate="animate"
-      >
-        <Controls
-          onMove={moveTetromino}
-          onDrop={dropTetromino}
-          onRotate={rotateTetromino}
-          onHardDrop={hardDropTetromino}
-          onTogglePause={togglePause}
-          isPaused={isPaused}
-          gameActive={gameActive}
-        />
       </motion.div>
       
       {/* Instructions modal */}

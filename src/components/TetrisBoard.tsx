@@ -2,8 +2,8 @@
 import React from 'react';
 
 // Define the board dimensions - same as in useTetris.ts
-const BOARD_WIDTH = 10;
-const BOARD_HEIGHT = 20;
+const BOARD_WIDTH = 15;
+const BOARD_HEIGHT = 25;
 const CELL_SIZE = 30; // Size of each cell in pixels
 
 interface TetrisBoardProps {

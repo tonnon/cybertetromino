@@ -54,7 +54,7 @@
   }
   
   html, body, #root {
-    @apply bg-background text-foreground w-full h-full overflow-hidden;
+    @apply bg-background text-foreground w-full h-full ;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
 }
