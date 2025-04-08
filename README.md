@@ -9,10 +9,6 @@
 - 🔊 Synthwave-inspired sound effects (optional)
 - 🌐 Fully responsive and playable in-browser
 
-## 📸 Preview
-
-> _(Insert screenshot or gif here)_
-
 ## 🛠️ Tech Stack
 
 - **React** – component-based architecture
